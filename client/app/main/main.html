@@ -1,0 +1,26 @@
+<header class="hero-unit" id="banner">
+  <div layout-fill>
+    <h1>'Allo, 'Allo!</h1>
+    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
+    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
+  </div>
+</header>
+<div>
+  <md-list>
+   <md-list-item class="md-3-line" ng-repeat="item in main.awesomeThings">
+      <div class="md-list-item-text" layout>
+        <div flex="90">
+          <h3>{{ item.name }}</h3>
+          <h4>{{ item.info }}</h4>
+        </div>
+        <md-icon md-svg-icon="bower_components/material-design-icons/navigation/svg/design/ic_cancel_18px.svg" aria-label="Remove Icon" class="remove-icon" flex="10" ng-click="main.showConfirm($event, item)"></md-icon>
+      </div>
+      <md-divider></md-divider>
+   </md-list-item> 
+  </md-list>
+  <div layout="column" layout-align="center end">
+    <md-button class="md-fab" aria-label="Eat cake" ng-click="main.showDialog($event)">
+      <md-icon md-svg-src="bower_components/material-design-icons/content/svg/design/ic_add_24px.svg"></md-icon>
+    </md-button>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<md-dialog aria-label="Add Thing" class="thing-dialog" ng-cloak>
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Add New Thing</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="dialog.cancel()">
+          <md-icon md-svg-src="bower_components/material-design-icons/navigation/svg/design/ic_close_18px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <md-input-container md-no-float class="md-block">
+	        <label>Name</label>
+	        <input ng-model="thing.name" type="text">
+	      </md-input-container>
+	      <md-input-container md-no-float class="md-block">
+	        <label>Info</label>
+	        <textarea ng-model="thing.info"></textarea>
+	      </md-input-container>
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <md-button ng-click="dialog.cancel()">
+       Cancel
+      </md-button>
+      <md-button ng-click="dialog.save(thing)" style="margin-right:20px;">
+        Save
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
